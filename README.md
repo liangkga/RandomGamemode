@@ -1,62 +1,62 @@
-# RandomGamemode
- EXILED plugin for SCP:SL that has a configurable chance (10% by default) of activating a special gamemode when the round starts. Below is the current list of gamemodes.
+# 随机游戏模式
+一个用于 SCP:SL 的 EXILED 插件，在回合开始时有可配置的几率（默认为10%）激活一个特殊游戏模式。以下是当前的游戏模式列表。
  
-## Dodgeball
-- Players spawn as either Class D, Scientist, or Guard on the surface at the MTF spawn
-- Everyone gets unlimited SCP-018s with shortened fuse times
+## 躲避球
+- 玩家在地表的MTF出生点生成，身份为D级人员、科学家或守卫
+- 每个人都会获得无限的SCP-018，并且引信时间缩短
 
-## Peanut Raid
-- All SCPs are switched to Class D's, everyone else is switched to SCP-173
-- Class D is shrunk by 50% and needs to escape and become Chaos Insurgency to win
+## 花生突袭
+- 所有SCP都切换为D级人员，其他人则切换为SCP-173
+- D级人员体型缩小50%，需要逃脱并成为混沌分裂者才能获胜
 
-## Blue Screen of Death
-- All SCPs are switched to SCP-079, everyone else is switched to Scientist
-- SCP-079 starts off at level 3, scientists start with nothing
-- Scientists need to work together to obtain keycards and access heavy containment to kill SCP-079, before 079 can kill them
-- All lights on the map will turn blue
-- The round will end after 15 minutes if 079 isn't killed in time
+## 蓝屏死机
+- 所有SCP都切换为SCP-079，其他人则切换为科学家
+- SCP-079开局为3级，科学家开局一无所有
+- 科学家需要共同努力获取钥匙卡并进入重度收容区以消灭SCP-079，否则SCP-079会消灭他们
+- 地图上所有的灯都会变成蓝色
+- 如果SCP-079在15分钟内未被消灭，则回合结束
 
-## Night of the Living Nerd
-- All SCPs are switched to Scientist, everyone else is switched to Class D
-- Class Ds spawn with a flashlight and SCP-268
-- Scientist spawns with an LMG, flashlight, 1000 rounds of ammo, increased movement speed, and a facility manager keycard
-- Facility lights are turned off for the entirety of the round, players will need to navigate with their flashlights
-- Class Ds need to work together to kill the scientist by any means necessary to win the round
+## 活死人书呆子之夜
+- 所有SCP都切换为科学家，其他人则切换为D级人员
+- D级人员出生时带有一个手电筒和SCP-268
+- 科学家出生时带有一把轻机枪、手电筒、1000发子弹、移动速度增加，以及一张设施主管钥匙卡
+- 设施的灯光在整个回合中都会关闭，玩家需要使用手电筒导航
+- D级人员需要共同努力，不惜一切代价杀死科学家以赢得回合
 
-## Randomizer
-- All roles, spawns, and inventories are randomized
-- Friendly fire is enabled and normal win conditions are disabled to prevent the round from ending too early
-- Only one SCP will spawn each round since they cannot attack each other
-- The round will end when a single player is left alive
+## 随机化器
+- 所有角色、出生点和物品栏都将随机化
+- 友军伤害已启用，正常的胜利条件已禁用，以防止回合过早结束
+- 由于SCP之间无法互相攻击，每回合只会生成一个SCP
+- 当只剩下一名玩家存活时，回合结束
 
-## Annoying Mimicry
-- All SCPs are switched to 939, everyone else becomes Class D
-- When a Class D is killed by 939, they will also become 939
-- MTF and Chaos spawning is disabled, and players cannot escape to surface
-- Each Class D spawns with a jailbird to have a chance to fight back
+## 烦人的拟态
+- 所有SCP都切换为939，其他人则成为D级人员
+- 当D级人员被939杀死时，他们也会变成939
+- MTF和混沌分裂者的生成被禁用，玩家无法逃到地表
+- 每个D级人员出生时都带有一把囚犯用的小刀，以便有机会反击
 
-## Locked In
-- Light containment never goes into its decontamination phase, and Gate A and B are permanently locked
-- With light containment always available and nobody able to escape or activate the nuke, the round will play out very differently
-- MTF and Chaos spawn at different locations; MTF spawns in entrance zone and Chaos spawns in a random heavy containment SCP chamber
+## 禁闭
+- 轻度收容区永远不会进入净化阶段，A门和B门永久锁定
+- 由于轻度收容区始终可用，且无人能够逃脱或激活核弹，回合的进行方式将大不相同
+- MTF和混沌分裂者在不同地点生成；MTF在入口区域生成，混沌分裂者在重度收容区的一个随机SCP收容室内生成
 
-## Infection
-- All SCPs are switched to 049
-- SCP-049-2's are larger and have more health
-- Players who die are automatically revived as SCP-049-2
+## 感染
+- 所有SCP都切换为049
+- SCP-049-2体型更大，生命值更高
+- 死亡的玩家会自动复活为SCP-049-2
 
-## Living Like Larry
-- All SCPs are switched to Class D, everyone else is switched to SCP-106
-- SCP-106's spawn at the top of 173's old spawn room, Class D's spawn at the bottom
-- Class D's start with an O5 keycard, and must escape and become Chaos while being chased by the hoard of Larry's
+## 像Larry一样生活
+- 所有SCP都切换为D级人员，其他人则切换为SCP-106
+- SCP-106在173旧出生点的顶部生成，D级人员在底部生成
+- D级人员开局带有一张O5钥匙卡，必须在被成群的拉里追赶的同时逃脱并成为混沌分裂者
 
-# Commands
-## forcegamemode
-- Forces the next round to start with a gamemode
-- Available to owners and admins
-- Accepts a number as an optional argument to set a specific gamemode (Number must correspond to a valid gamemode in the order listed here, starting from 1)
-- A random gamemode will be chosen if no argument is provided
-- Set the number argument to 0 to unset a forced gamemode round
+# 命令
+## forcegamemode (强制游戏模式)
+- 强制下一回合以某个游戏模式开始
+- 服主和管理员可用
+- 接受一个数字作为可选参数来设置特定的游戏模式（数字必须对应此处列出的有效游戏模式的顺序，从1开始）
+- 如果未提供参数，则会选择一个随机的游戏模式
+- 将数字参数设置为0以取消强制游戏模式回合
 
-# Issues & Pull Requests
- If you would like to contribute to this repository by creating an issue or pull request, please refer to the [contributing guidelines.](https://lambdagaming.github.io/contributing.html)
+# 问题和拉取请求
+ 如果您想通过创建问题或拉取请求来为本仓库做出贡献，请参阅[贡献指南](https://lambdagaming.github.io/contributing.html)喵~
